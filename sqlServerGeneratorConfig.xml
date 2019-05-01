@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+    <classPathEntry  location="sqljdbc4-3.0.jar"/> 
+    <context id="DB2Tables">  
+        <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" connectionURL="jdbc:sqlserver://win-server2012:1433;DatabaseName=crsdb" userId="sa" password="zwyl123A">  
+        </jdbcConnection>  
+		<!--生成Model类存放位置-->
+         <javaModelGenerator targetPackage="com.mayi.db.dao" targetProject="../src">
+             <property name="enableSubPackages" value="true"/>
+             <property name="trimStrings" value="true"/>
+         </javaModelGenerator>
+         <!--生成映射文件存放位置-->
+         <sqlMapGenerator targetPackage="com.mayi.db.mapping" targetProject="../src">
+             <property name="enableSubPackages" value="true"/>
+         </sqlMapGenerator>
+         <!--生成Dao类存放位置-->
+         <javaClientGenerator type="XMLMAPPER" targetPackage="com.mayi.db.mapping" targetProject="../src">
+             <property name="enableSubPackages" value="true"/>
+         </javaClientGenerator>
+         <!--生成对应表及类名-->
+		 <table tableName="am_cs_agent" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="agent_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="bi_base_code" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="code_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="bi_base_type" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="base_type_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="cm_customer_detail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="customer_detail_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="cm_customer" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="customer_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+
+		 <table tableName="cm_customer_label_relation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="customer_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="cm_label" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="label_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="cm_label_type" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="label_type_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="cm_login_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="login_log_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="cm_qr_code_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="qr_code_log_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="cm_short_msg_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="smg_invitation_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="dm_dealer_group" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="dealer_group_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+
+		 <table tableName="dm_dealer_store" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="dealer_store_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="dm_dealer_store_brand" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="dealer_store_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="dm_dealer_user" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="dealer_user_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="dm_dealer_user_detail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="dealer_user_detail_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="fm_files" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="file_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="pm_appointment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="appointment_order_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="pm_appointment_car_model" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="car_model_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="pm_appointment_dealer_relation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="appointment_order_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_auto_reply" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="auto_reply_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+
+		 <table tableName="sm_car_brand" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="brand_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_car_model" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="car_model_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_chatting_room" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="chatting_room_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_email_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="email_log_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_financial_product" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="financial_product_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_financial_product_category" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="financial_product_category_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_general_setting" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="general_setting_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_invite_dealer_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="invited_dealer_log_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_quickly_reply" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="quickly_reply_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+
+		 <table tableName="sm_reminder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="reminder_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_session" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="session_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_session_account" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="chatting_account_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_session_log" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="session_log_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_session_rate" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="session_rate_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_short_msg_template" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="short_msg_template_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="sm_working_calendar" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="working_calendar_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_test_result_detail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="test_result_detail_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_assement_option" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="assement_option_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_assessment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="assessment_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_assessment_question" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="assessment_question_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+
+		 <table tableName="tm_course" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="course_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_course_comment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="course_comment_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_document" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="document_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_document_comment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="document_comment_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_test_result" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="test_result_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="tm_training_info" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="training_info_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="um_admin_user" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="admin_user_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="um_permission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="permission_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+		 <table tableName="um_user_permission_relation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+			<generatedKey column="admin_user_id" sqlStatement="SqlServer" identity="true" />
+		 </table>
+	</context>
+</generatorConfiguration>  

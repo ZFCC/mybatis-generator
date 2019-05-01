@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+    <classPathEntry  location="mysql-connector-java-5.1.38.jar"/> 
+    <context id="DB2Tables">  
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/qicourse" userId="root" password="123456">  
+        </jdbcConnection>  
+		<!--Model entity-->
+         <javaModelGenerator targetPackage="com.zwyl.model" targetProject="../src">
+             <property name="enableSubPackages" value="true"/>
+             <property name="trimStrings" value="true"/>
+         </javaModelGenerator>
+         <!--Map-->
+         <sqlMapGenerator targetPackage="mapper" targetProject="../src/">
+             <property name="enableSubPackages" value="true"/>
+         </sqlMapGenerator>
+         <!--Dao-->
+         <javaClientGenerator type="XMLMAPPER" targetPackage="com.zwyl.mapper" targetProject="../src">
+             <property name="enableSubPackages" value="true"/>
+         </javaClientGenerator>
+
+         <table schema="qicourse" tableName="ss_app_update_version" domainObjectName="SsAppUpdateVersion" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+     </context>  
+</generatorConfiguration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
